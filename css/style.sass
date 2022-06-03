@@ -29,15 +29,13 @@ main
         width: 300px
         height: 200px
         //background-color: #f00
-        background-color: rgba(#000 ,.5 )
+        background-color: rgba(#000 ,.4 ) //Color sombra
         //z-index: 100
         transform: skewX(45deg)
         filter: blur(20px)
         transform-origin: bottom
 
-
     span
-        //background-color: #3e3f46
         background-color: #33a3ee
         position: relative
         width: 200px
@@ -53,7 +51,6 @@ main
             50%
                 transform: translateX(80px)
         &:hover
-            //background-color: #33a3ee
             background-color: #3e3f46
             transition: 0s
             &::before
@@ -61,13 +58,11 @@ main
                 background-color: #2e3133
                 transition: 0.5s
             &::after
-                //background-color: #2982b9
                 background-color: #35383e
                 transition: 0s
         &::before
             content: ''
             //background-color: #f00 //Con rojo es más fácil ver la imagen al crearla
-            //background-color: #2e3133
             background-color: #1f5378
             position: absolute
             top: 0
@@ -80,7 +75,6 @@ main
         &::after
             content: ''
             //background-color: #f00
-            //background-color: #35383e
             background-color: #2982b9
             position: absolute
             top: -150px

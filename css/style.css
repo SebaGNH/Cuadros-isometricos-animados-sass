@@ -33,7 +33,7 @@ main::before {
   top: 300px;
   width: 300px;
   height: 200px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   transform: skewX(45deg);
   filter: blur(20px);
   transform-origin: bottom;
