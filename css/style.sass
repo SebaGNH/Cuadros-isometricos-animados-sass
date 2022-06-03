@@ -15,6 +15,26 @@ body
 main
     position: relative
     transform: skewY(-15deg) translateX(50px) translateY(50px) //Inclinamos la columna y la movemos
+    animation: color_animado 2.5s linear infinite
+    @keyframes color_animado
+        0%
+            filter: hue-rotate(0deg)
+        100%
+            filter: hue-rotate(360deg) //Color dinamico
+    &::before
+        content: ''
+        position: absolute
+        top: 300px
+        width: 300px
+        height: 200px
+        background-color: #f00
+        //background-color: rgba(#000 ,.1 )
+        //z-index: 100
+        transform: skewX(45deg)
+        filter: blur(20px)
+        transform-origin: bottom
+
+
     span
         background-color: #3e3f46
         position: relative
