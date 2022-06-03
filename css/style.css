@@ -25,6 +25,7 @@ main span {
   height: 40px;
   display: block;
   transition: 0.5s;
+  z-index: var(--i);
 }
 main span:hover {
   background-color: #33a3ee;
@@ -33,6 +34,10 @@ main span:hover {
 main span:hover::before {
   background-color: #1f5378;
   transition: 0.5s;
+}
+main span:hover::after {
+  background-color: #2982b9;
+  transition: 0s;
 }
 main span::before {
   content: "";

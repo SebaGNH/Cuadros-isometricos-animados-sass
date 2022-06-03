@@ -22,12 +22,16 @@ main
         height: 40px
         display: block
         transition: 0.5s
+        z-index: var(--i)
         &:hover
             background-color: #33a3ee
             transition: 0s
             &::before
                 background-color: #1f5378
                 transition: 0.5s
+            &::after
+                background-color: #2982b9
+                transition: 0s
         &::before
             content: ''
             //background-color: #f00 //Con rojo es más fácil ver la imagen al crearla
