@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #292929;
+  background-color: #6a737b;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -33,35 +33,46 @@ main::before {
   top: 300px;
   width: 300px;
   height: 200px;
-  background-color: #f00;
+  background-color: rgba(0, 0, 0, 0.5);
   transform: skewX(45deg);
   filter: blur(20px);
   transform-origin: bottom;
 }
 main span {
-  background-color: #3e3f46;
+  background-color: #33a3ee;
   position: relative;
   width: 200px;
   height: 40px;
   display: block;
   transition: 0.5s;
   z-index: var(--i);
+  animation: dezplazamiento 5s ease-in-out infinite;
+  animation-delay: calc(-1s * var(--i));
+}
+@keyframes dezplazamiento {
+  0%, 100% {
+    transform: translateX(-80px);
+  }
+  50% {
+    transform: translateX(80px);
+  }
 }
 main span:hover {
-  background-color: #33a3ee;
+  background-color: #3e3f46;
   transition: 0s;
 }
 main span:hover::before {
   background-color: #1f5378;
+  background-color: #2e3133;
   transition: 0.5s;
 }
 main span:hover::after {
-  background-color: #2982b9;
+  background-color: #35383e;
   transition: 0s;
 }
 main span::before {
   content: "";
-  background-color: #2e3133;
+  background-color: #1f5378;
   position: absolute;
   top: 0;
   left: -150px;
@@ -73,7 +84,7 @@ main span::before {
 }
 main span::after {
   content: "";
-  background-color: #35383e;
+  background-color: #2982b9;
   position: absolute;
   top: -150px;
   left: 0;

@@ -4,7 +4,8 @@
     box-sizing: border-box
 
 body
-    background-color: #292929
+    //background-color: #292929
+    background-color: #6a737b
     color: #fff
     display: flex
     justify-content: center
@@ -27,8 +28,8 @@ main
         top: 300px
         width: 300px
         height: 200px
-        background-color: #f00
-        //background-color: rgba(#000 ,.1 )
+        //background-color: #f00
+        background-color: rgba(#000 ,.5 )
         //z-index: 100
         transform: skewX(45deg)
         filter: blur(20px)
@@ -36,26 +37,38 @@ main
 
 
     span
-        background-color: #3e3f46
+        //background-color: #3e3f46
+        background-color: #33a3ee
         position: relative
         width: 200px
         height: 40px
         display: block
         transition: 0.5s
         z-index: var(--i)
+        animation: dezplazamiento 5s ease-in-out infinite
+        animation-delay: calc( -1s * var(--i))
+        @keyframes dezplazamiento
+            0%,100%
+                transform: translateX(-80px)
+            50%
+                transform: translateX(80px)
         &:hover
-            background-color: #33a3ee
+            //background-color: #33a3ee
+            background-color: #3e3f46
             transition: 0s
             &::before
                 background-color: #1f5378
+                background-color: #2e3133
                 transition: 0.5s
             &::after
-                background-color: #2982b9
+                //background-color: #2982b9
+                background-color: #35383e
                 transition: 0s
         &::before
             content: ''
             //background-color: #f00 //Con rojo es más fácil ver la imagen al crearla
-            background-color: #2e3133
+            //background-color: #2e3133
+            background-color: #1f5378
             position: absolute
             top: 0
             left: -150px
@@ -67,7 +80,8 @@ main
         &::after
             content: ''
             //background-color: #f00
-            background-color: #35383e
+            //background-color: #35383e
+            background-color: #2982b9
             position: absolute
             top: -150px
             left: 0
